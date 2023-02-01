@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.ProfileActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/icHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/otp_header_colored"
+                android:scaleType="centerInside"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/otp_header_white"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/icBack"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <FrameLayout
+            android:id="@+id/layImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layHeader">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/dotted_back_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profile_placeholder" />
+
+
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_take_pic"
+                app:layout_constraintBottom_toBottomOf="@+id/layImage"
+                app:layout_constraintEnd_toEndOf="@+id/layImage"
+                app:layout_constraintStart_toEndOf="@+id/layImage" />
+
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/hint_color"
+            app:boxStrokeColor="@color/text_color"
+            app:boxStrokeWidth="0.7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layImage">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:hint="Name"
+                android:inputType="text"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text="Chaya Tanna"
+                android:textColorHint="@color/hint_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/view_line"
+            app:layout_constraintEnd_toEndOf="@+id/edtName"
+            app:layout_constraintStart_toStartOf="@+id/edtName"
+            app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:textColorHint="@color/hint_color"
+            app:boxStrokeColor="@color/text_color"
+            app:boxStrokeWidth="0.7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtName">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:hint="Email"
+                android:inputType="text"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text="chayatanna@hotmail.com"
+                android:textColorHint="@color/hint_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/view_line"
+            app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+            app:layout_constraintStart_toStartOf="@+id/edtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+        <LinearLayout
+            android:id="@+id/layPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/edtEmail">
+
+            <com.miplanit.utils.countrycode.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#E9F3FF"
+                android:gravity="center"
+                android:padding="10dp"
+                app:ccp_defaultNameCode="US"
+                app:ccp_hidePhoneCode="false"
+                app:ccp_showFlag="false"
+                app:ccp_showFullName="false" />
+
+
+            <LinearLayout
+                android:id="@+id/layEDTPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layName">
+
+
+                <EditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/flag_transparent"
+                    android:fontFamily="@font/sfui_regular"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:textColor="#3B3B3B"
+                    android:textSize="20dp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/edtEmail"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view_line" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@+id/layPhone">
+
+
+            <TextView
+                android:id="@+id/tvSkipForNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/skip_for_now"
+                android:fontFamily="@font/sfui_medium"
+                android:gravity="center"
+                android:text="Skip for Now"
+                android:textColor="#868686"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/tvContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_otp"
+                android:fontFamily="@font/sfui_medium"
+                android:gravity="center"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

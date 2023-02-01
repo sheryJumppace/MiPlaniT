@@ -12,6 +12,15 @@
         android:theme="@style/Theme.MiPlaniT"
         tools:targetApi="31">
         <activity
+            android:name=".ui.SyncCalenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ImportCalenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ForgotPasswordActivity"
             android:exported="false" />
         <activity

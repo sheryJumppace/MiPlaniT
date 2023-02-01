@@ -8,13 +8,42 @@
         android:layout_height="match_parent"
         tools:context=".ui.OTPActivity">
 
-        <ImageView
-            android:id="@+id/icHeader"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/otp_header"
-            android:scaleType="centerInside"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/icHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/otp_header_colored"
+                android:scaleType="centerInside"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/otp_header_white"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/icBack"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
         <LinearLayout
@@ -25,7 +54,7 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/icHeader">
+            app:layout_constraintTop_toBottomOf="@+id/layHeader">
 
             <View
                 android:layout_width="60dp"
@@ -70,6 +99,7 @@
 
 
             <LinearLayout
+                android:id="@+id/layVerifyCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
